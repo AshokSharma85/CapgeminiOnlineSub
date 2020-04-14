@@ -1,0 +1,24 @@
+<div class="col-md-6">
+    <h2 class="text-center">Add Student</h2>
+  <form (ngSubmit)="createStudent()">
+
+    <div>
+    <input type="number" placeholder="enter id" id="id" name="id" [(ngModel)]="stud.id"  class="form-control" >
+  </div>
+  
+  <div>
+    <input type="text" placeholder="enter name" id="name" name="name" [(ngModel)]="stud.name"  class="form-control" >
+  </div>
+ 
+  <div>
+    <input type="text" placeholder="enter dept" id="dept" name="dept" [(ngModel)]="stud.dept"   class="form-control" >
+  </div>
+
+  <div>
+  <input type="submit" value="Add Student" class="btn btn-danger">
+</div>
+</form>
+   
+</div>
+
+

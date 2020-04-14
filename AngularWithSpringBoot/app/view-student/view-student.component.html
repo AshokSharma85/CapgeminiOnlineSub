@@ -1,0 +1,16 @@
+
+
+<table class="table table-bordered table-hover col-md-10 ">
+    <thead>
+      <th>Student Id</th>
+      <th>Name</th>
+      <th>Dept</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let stu of students">
+        <td>{{stu.id}}</td>
+        <td>{{stu.name}}</td>
+        <td>{{stu.dept}}</td>
+      </tr>
+    </tbody>
+</table>

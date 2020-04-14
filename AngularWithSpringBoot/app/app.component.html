@@ -1,0 +1,45 @@
+<div class="container">
+  <h1 class="text-danger text-center">Welcome to {{ title }}!</h1>
+  <hr />
+
+  <div id="fetchbtn">
+    <button type="button" class="btn btn-outline-success" (click)="getAllStudents();">Click me</button>
+  </div>
+  <div><small class="text-info">Click the button to fetch the student from the database!</small></div>
+
+  <div *ngIf="myresponse">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <th>Student Id</th>
+        <th>Student Name</th>
+        <th>Student Dept</th>
+
+       
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of myresponse">
+          <td>{{student.id}}</td>
+          <td>{{student.name}}</td>
+          <td>{{student.dept}}</td>
+
+        
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+<header class="jumbotron text-center p-4 ">
+  <h1>{{title}}</h1>
+ </header>
+
+
+<nav class="col-md-12 row p-3 bg-dark">
+  <a class="nav-item nav-link " routerLink="view">view student</a>
+  
+  <a class="nav-item nav-link  " routerLink="add">add student</a>
+  
+  </nav>
+  <router-outlet></router-outlet>
